@@ -46,6 +46,7 @@
 	}
 
 	#camposLogoEInputPesquisa{
+		display: inline-flex;
 		display: -webkit-box;
 		margin-left: 10%;
 		margin-right: 10%;
@@ -117,7 +118,7 @@
 		text-decoration: none;
 		padding: .3em 1.8em .3em 1.8em;
 		border: 2px solid #fff;
-		background: initial;
+		background: transparent;
 		font-weight: bold;
 		font-size: 1.5rem;
 		outline: none;
@@ -242,7 +243,7 @@
 			margin-bottom: 20px;
 			font-size: 1.4rem;
 		}
-	}
+	}	
 
 	footer{
 		background-color: bisque;
@@ -288,8 +289,8 @@
 	.titulo-tccs-encontrados{
 		background: rgb(255, 0, 0);
 		text-align: center;
-		font-size: 1.1rem;
-		font-family: sans-serif;
+		font-size: 1rem;
+		font-family: serif;
 		color: #fff;
 		height: 30%;
 		padding: 5px;
@@ -329,6 +330,7 @@
 		width: 100%;
 		background: #fff;
 		height: 60%;
+
 		box-shadow: 0.5px 1px 3px 1px rgba(0, 0, 0, 0.3555);
 		border-radius: 2.5px;
 		margin-top: 10%;
@@ -336,10 +338,12 @@
 
 	.linhaGridResultado{
 		width: 100%;
+		display: inline-flex;
 		display: -webkit-box;
 	}
 
 	.par-coluna{
+		display: inline-flex;
 		display: -webkit-box;
 		width: 50%;
 	}
@@ -384,7 +388,7 @@
 		}
 	}
 
-	@media(max-width: 650px){
+	@media(max-width: 550px){
 		
 		.linhaGridResultado{
 			display: block;
@@ -404,6 +408,11 @@
 		}
 	}
 
+	@media(max-height: 400px){
+		.card-resultado-encontrado {
+			min-height: 370px;
+		} 
+	}
 
 </style>
 
@@ -602,7 +611,7 @@
 									<span class="textoLogoTCC textoLogoTCCResultado">TCC</span>
 								</div>
 								<section class="titulo-tccs-encontrados">	
-									Tecnologias e testes reais de e-learning..
+									Tecnologias e testes reais de e-learning.
 								</section>
 								<div class="barra-botoes-card">
 									<div class="barra-rodape">
