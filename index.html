@@ -1,48 +1,632 @@
+<style type="text/css">
+
+	*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+	}
+
+	@font-face {
+		font-family: "Sawasdee";
+		src: url("./content/fonts/Sawasdee.ttf");
+	}
+
+	@font-face {
+		font-family: "Nouvelle Vague";
+		src: url("./content/fonts/nouvelle_vague_final.ttf");
+	}
+
+	@font-face {
+		font-family: "Code_Light_Font";
+		src: url("./content/fonts/CODE_Light.otf");
+	}
+
+	@font-face {
+		font-family: "Pacifico";
+		src: url("./content/fonts/Pacifico.ttf");
+	}
+
+	body{
+		margin: 0;
+		font-size: 16px;
+	}
+
+	#container{
+		background-repeat-x: initial;
+		background-repeat-y: initial;
+		background-position-x: 0%;
+		background-position-y: 20%;
+		background-image: url("./imagens/ImagemTCCxXx.svg");
+		height: auto;
+		position: relative;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		background-size: cover;
+		padding-top: 20px;
+	}
+
+	#camposLogoEInputPesquisa{
+		display: -webkit-box;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	#inputPesquisaTCC{
+		width: 85%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		font-size: 1.3em;
+		font-family: Code_Light_Font;
+		border-left-color: rgb(255, 0, 0);
+		border-left-width: thick;
+		border-bottom: 0px;
+		border-top: 0px;
+		border-right: 0px;
+		border-left: 0px;
+		padding-left: 5px;
+		outline-color: rgb(255, 0, 0);
+		height:	47px;
+	}
+
+	#linhaLogoECampoPesquisa{
+		height: 100px;
+	}
+
+	.logo{
+		width: 20%;
+		font-size: 2em;
+		font-weight: bold;
+		color: rgb(255, 0, 0);
+		text-align: center;	
+		font-family: Nouvelle Vague;
+	}
+
+	.linhaLogo{
+		margin-top: 1px;
+		margin-bottom: 1px;
+		width: 100px;
+		height: 5px;
+		background-color: rgb(255, 0, 0);	
+		border-width: 0px;
+	}
+
+	.textoLogoTCC{
+		color: #fff;
+		font-size: 1.6em;
+	}
+
+	.linhaAlfa{
+		background-color: rgb(255, 255, 255);		
+	}
+
+	#pesquisarTCC{
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	#containerTituloTCC{
+		text-align: center;
+		margin: 12px;
+	}
+
+	.botao{
+		color: #fff;
+		width: auto;
+		border-radius: 3px;
+		cursor: pointer;
+		text-decoration: none;
+		padding: .3em 1.8em .3em 1.8em;
+		border: 2px solid #fff;
+		background: initial;
+		font-weight: bold;
+		font-size: 1.5rem;
+		outline: none;
+	}
+
+	.botao:hover{
+		background: #fff;
+		color: #000;
+	}
+
+	#botaoPesquisar{
+		outline: none;
+	}
+	
+	#containerBotoes{
+		width: 100%;
+		text-align: center;
+		/*margin-top: 10%;
+		margin-bottom: 50px;*/
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+
+	.textoTitulo{
+		color: #fff;
+	}
+
+	#tituloTCC{
+		font-size: 2.5em;
+		font-weight: bold;
+		font-family: Pacifico;
+	}
+
+	#subTituloTCC{
+		font-size: 1.2em;
+		font-family: Sawasdee;
+	}
+
+	/*INPUT COM PESQUISA*/
+
+	#campoPesquisaTCC {
+		width: 80%;
+		height: 100%;
+		margin-top: 1.5%;
+	}
+
+	#campoPesquisaTCC input {
+		display: block;
+		float: left;
+		height: 60px;
+		line-height: 40px;
+	}
+
+	#campoPesquisaTCC button {
+		display: block;
+		height: 60px;
+		margin: 0;
+		margin-left: 160px;
+		padding: 4px;
+		width: 15%;
+		background: rgb(255,0,0);
+		border: 0;
+	}
+
+	#campoPesquisaTCC button img {
+		height: 35px;
+		width: 35px;
+	}
+
+	@media(max-width: 700px){
+		#camposLogoEInputPesquisa {
+			display: block;
+			margin: 0%;
+		}	
+		.logo{
+			width: 100%;
+		}
+		#campoPesquisaTCC {
+			width: 100%;
+		}
+		#inputPesquisaTCC{
+			width: 91%;
+		}
+		#linhaLogoECampoPesquisa{
+			height: 200px;
+		}
+		#campoPesquisaTCC button{
+			width: 9%;
+		}
+		#container{
+			background-position: center;
+		}
+	}
+
+	@media(max-width: 500px){
+		#inputPesquisaTCC{
+			width: 84%;
+		}
+		
+		#campoPesquisaTCC button{
+			width: 16%;
+		}
+	}
+
+	@media(min-width: 1024px){
+		#tituloTCC{
+			font-size: 3em;
+		}
+
+		#subTituloTCC{
+			font-size: 1.5em;
+		}
+
+		#containerBotoes {
+			font-size: 1.5em;
+		}
+	}
+
+	@media(max-width: 450px){
+		.botao{
+			width: 80%;
+			margin-bottom: 20px;
+			font-size: 1.4rem;
+		}
+	}
+
+	footer{
+		background-color: bisque;
+	}
+
+	#tituloResultados{
+		font-size: 2.5em;
+		font-weight: bold;
+		font-family: Pacifico;
+		color: #000;
+		text-align: center;
+	}
+
+	#resultadoPesquisa{
+		/*display: none;*/
+	}
+
+	#containerResultados{
+		width: 100%;
+		height: auto;
+		display: block;
+		padding-left: 5%;
+		padding-right: 5%;
+		padding-bottom: 5%;
+	}
+
+	.textoLogoTCCResultado{
+		color: rgb(255, 0, 0);
+	}
+
+	.logo-card{
+		font-size: 0.8em;
+		margin-top: 3%;
+		text-align: center;
+		padding-top: 10%;
+		height: 35%;
+	}
+
+	.linha-logo-card{
+		width: 40px;
+	}
+
+	.titulo-tccs-encontrados{
+		background: rgb(255, 0, 0);
+		text-align: center;
+		font-size: 1.1rem;
+		font-family: sans-serif;
+		color: #fff;
+		height: 30%;
+		padding: 5px;
+	}
+
+	.barra-botoes-card{
+		text-align: center;
+		height: 35%;
+		padding-top: 25%;
+		position: relative;
+	}
+
+	.botao-detalhes-card{
+		text-decoration: none;
+		/*color: rgb(255, 0, 0);
+		font-family: sans-serif;*/
+		color: #bbb;
+		width: auto;
+		border-radius: 0px;
+		cursor: pointer;
+		padding: .3em 0.5em .3em 0.5em;
+		border: none;
+		font-size: 1rem;
+		outline: none;
+		position: relative;
+		float: right;
+		transition: all 1s ease;
+		font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+	}
+	
+	.botao-detalhes-card:hover{
+		background: rgba(255,0,0,1);
+		color: #ffffff;
+	}
+
+	.card-resultado-encontrado{
+		width: 100%;
+		background: #fff;
+		height: 60%;
+		box-shadow: 0.5px 1px 3px 1px rgba(0, 0, 0, 0.3555);
+		border-radius: 2.5px;
+		margin-top: 10%;
+	}
+
+	.linhaGridResultado{
+		width: 100%;
+		display: -webkit-box;
+	}
+
+	.par-coluna{
+		display: -webkit-box;
+		width: 50%;
+	}
+
+	.coluna{
+		width: 46%;		
+	}
+
+	.coluna1, .coluna3{
+		margin-right: 4%;
+	}
+
+	.coluna1, .coluna3{
+		margin-left: 2%; 
+	}
+
+	.barra-botoes-card hr{
+		margin: 0px;
+
+	}
+
+	.barra-rodape {
+		height: 38px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+	}
+
+	@media(max-width: 1000px){
+		
+		.linhaGridResultado{
+			display: block;
+		}
+
+		.par-coluna{
+			width: 100%;
+		}
+
+		.card-resultado-encontrado {
+			height: 70%;
+		}
+	}
+
+	@media(max-width: 650px){
+		
+		.linhaGridResultado{
+			display: block;
+		}
+
+		.par-coluna{
+			display: block;
+		}
+
+		.coluna{
+			width: 100%;
+			margin: 0px;
+		}
+
+		.card-resultado-encontrado {
+			height: 70%;
+		}
+	}
+
+
+</style>
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>My first web page</title>
-	<link rel="stylesheet" href="arquivo.css">
-</head>
-<body background="#66008d">
-	<header>
-		<h1 >My first title hihi...</h1>
-	</header>
-	<article>
-		<h2>A subtitle to test</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, deleniti quidem commodi harum neque, natus. Aliquid libero debitis nostrum quam mollitia magni, consequatur sunt dolore voluptates quidem, natus maiores sed.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi assumenda, ab itaque expedita eos perferendis enim consequatur hic libero distinctio, modi sit et natus ex quos ipsam, numquam eaque tempore.</p>
-	</article>
-	<article>
-		<p>By Nando Vieira</p>
-		<form action="http://requestb.in/1ahma4b1" method="post">
-		  <p>
-		    <img class="avatar" src="https://dl.dropboxusercontent.com/u/1540890/avatar.png" alt="Your avatar">
-		  </p>
-		  <p>
-		    <label>
-		      Your e-mail<br>
-		      <input name="email" type="email" autocorrect="off" autofocus>
-		    </label>
-		  </p>
-      
-		  <p class="password-container">
-		    <label>
-		      Your password<br>
-		      <input name="password" type="password">
-		      <input type="text">
-		    </label>
-		  </p>
-      
-		  <p>
- 		   <input type="submit" value="Log me in">
-		  </p>
-		</form>
-	</article>
-	<footer>
-		<p>It's all over.</p>
-	</footer>
-</body>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			Pesquisa TCC's
+		</title> 
+		 <link rel="import" href="http://www.polymer-project.org/components/font-roboto/roboto.html">
+		 <link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
+	</head> 
+	<body>
+		<header id="container">
+			<div id="linhaLogoECampoPesquisa">
+				<div id="camposLogoEInputPesquisa">
+					<div class="logo">
+						ALFA
+						<hr class="linhaLogo linhaAlfa">
+						<hr class="linhaLogo">
+						<span class="textoLogoTCC">TCC</span>
+					</div>
+					<div id="campoPesquisaTCC">	
+						<input type="text" id="inputPesquisaTCC" placeholder="Pesquisar TCC's" autofocus></input>
+						<button type="button" id="botaoPesquisar">
+							<img src="./imagens/search.png" alt="Pesquisar" />
+						</button>
+					</div>
+				</div>
+			</div>
+			<article id="containerTituloTCC">
+				<section class="textoTitulo" id="tituloTCC">
+					Chega de "queimar CD"!<br>
+					a época do Nero acabou junto com Roma.
+				</section>
+				<br>
+				<section class="textoTitulo" id="subTituloTCC">
+					Arquive seu TCC com muito mais facilidade.<br>
+					Bem vindo ao Repositório de TCC's da ALFA.<br>
+					Faça o upload do seu trabalho clicando no botão "Upload".<br>
+					Ou veja um tutorial de como usar o ALFA TCC clicando no botão "Como Usar".<br>
+					Simples Assim! =p
+				</section>
+			</article>
+
+			<div id="containerBotoes">
+				<button class="botao" id="botaoUpload">Upload</button>
+				<button class="botao" id="botaoComoUsar">Como Usar</button>
+			</div>
+
+		</header>
+		<footer id="resultadoPesquisa">
+			<section id="tituloResultados">
+				Resultados encontrados:
+			</section>
+
+			<div id="containerResultados">
+				<div class="linhaGridResultado">
+					<div class="par-coluna">
+						<div class="coluna coluna1">
+							<section class="card-resultado-encontrado">
+								<div class="logo logo-card">
+									ALFA
+									<hr class="linhaLogo linha-logo-card">
+									<span class="textoLogoTCC textoLogoTCCResultado">TCC</span>
+								</div>
+								<section class="titulo-tccs-encontrados">	
+									Sketch-based interfaces. Como transformar um Sketch em entrada para um sistema?
+								</section>
+								<div class="barra-botoes-card">
+									<div class="barra-rodape">
+										<button type="button" class="botao botao-detalhes-card">DETALHES</button>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="coluna coluna2">
+							<section class="card-resultado-encontrado">
+								<div class="logo logo-card">
+									ALFA
+									<hr class="linhaLogo linha-logo-card">
+									<span class="textoLogoTCC textoLogoTCCResultado">TCC</span>
+								</div>
+								<section class="titulo-tccs-encontrados">	
+									Interfaces eficientes para controle de grupos em ambientes 3D.
+								</section>
+								<div class="barra-botoes-card">
+									<div class="barra-rodape">
+										<button type="button" class="botao botao-detalhes-card">DETALHES</button>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					<div class="par-coluna">
+						<div class="coluna coluna3">
+							<section class="card-resultado-encontrado">
+								<div class="logo logo-card">
+									ALFA
+									<hr class="linhaLogo linha-logo-card">
+									<span class="textoLogoTCC textoLogoTCCResultado">TCC</span>
+								</div>
+								<section class="titulo-tccs-encontrados">	
+									Ferramentas para linguagens baseadas em restrições (Jason / AgentSpeak). 
+								</section>
+								<div class="barra-botoes-card">
+									<div class="barra-rodape">
+										<button type="button" class="botao botao-detalhes-card">DETALHES</button>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="coluna coluna4">
+							<section class="card-resultado-encontrado">
+								<div class="logo logo-card">
+									ALFA
+									<hr class="linhaLogo linha-logo-card">
+									<span class="textoLogoTCC textoLogoTCCResultado">TCC</span>
+								</div>
+								<section class="titulo-tccs-encontrados">	
+									Rendering fotorealista da quebra das ondas do mar. Nunca vi algo nesse gênero.
+								</section>
+								<div class="barra-botoes-card">
+									<div class="barra-rodape">
+										<button type="button" class="botao botao-detalhes-card">DETALHES</button>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			
+				<div class="linhaGridResultado">
+					<div class="par-coluna">
+						<div class="coluna coluna1">
+							<section class="card-resultado-encontrado">
+								<div class="logo logo-card">
+									ALFA
+									<hr class="linhaLogo linha-logo-card">
+									<span class="textoLogoTCC textoLogoTCCResultado">TCC</span>
+								</div>
+								<section class="titulo-tccs-encontrados">	
+									Aplicações e bibliotecas em TV Digital (Ginga).
+								</section>
+								<div class="barra-botoes-card">
+									<div class="barra-rodape">
+										<button type="button" class="botao botao-detalhes-card">DETALHES</button>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="coluna coluna2">
+							<section class="card-resultado-encontrado">
+								<div class="logo logo-card">
+									ALFA
+									<hr class="linhaLogo linha-logo-card">
+									<span class="textoLogoTCC textoLogoTCCResultado">TCC</span>
+								</div>
+								<section class="titulo-tccs-encontrados">	
+									Desenvolvimento de motores de jogos para web como a Unity, mas usando HTML5.
+								</section>
+								<div class="barra-botoes-card">
+									<div class="barra-rodape">
+										<button type="button" class="botao botao-detalhes-card">DETALHES</button>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					<div class="par-coluna">
+						<div class="coluna coluna3">
+							<section class="card-resultado-encontrado">
+								<div class="logo logo-card">
+									ALFA
+									<hr class="linhaLogo linha-logo-card">
+									<span class="textoLogoTCC textoLogoTCCResultado">TCC</span>
+								</div>
+								<section class="titulo-tccs-encontrados">	
+									Avaliação de performance Swing vs GTK vs QT vs SWT com vários look and feel e themas.
+								</section>
+								<div class="barra-botoes-card">
+									<div class="barra-rodape">
+										
+										<button type="button" class="botao botao-detalhes-card">DETALHES</button>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="coluna coluna4">
+							<section class="card-resultado-encontrado">
+								<div class="logo logo-card">
+									ALFA
+									<hr class="linhaLogo linha-logo-card">
+									<span class="textoLogoTCC textoLogoTCCResultado">TCC</span>
+								</div>
+								<section class="titulo-tccs-encontrados">	
+									Tecnologias e testes reais de e-learning.
+								</section>
+								<div class="barra-botoes-card">
+									<div class="barra-rodape">
+									
+										<button type="button" class="botao botao-detalhes-card">DETALHES</button>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</footer>
+	</body>
 </html>
 
+<script type="text/javascript">
+	
+	var obtenhaElemento = function(id){
+		return document.getElementById(id) || document.getElementsByClassName(id);
+	};
+
+	window.onload = function(){
+		//obtenhaElemento('inputPesquisaTCC')
+	};
+
+</script>
